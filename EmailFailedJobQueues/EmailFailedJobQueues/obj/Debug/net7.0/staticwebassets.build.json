@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "eD4xIxGxfTQCZi4PmclK1E6AfA6Q58ZwjVvmYMkkhns=",
+  "Source": "EmailFailedJobQueues",
+  "BasePath": "_content/EmailFailedJobQueues",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

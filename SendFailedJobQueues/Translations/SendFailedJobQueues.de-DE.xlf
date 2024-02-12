@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="de-DE" original="SendFailedJobQueues">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 12664904 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error Message Setup</source>
+          <target>Fehlermeldung Einrichtung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Error Message Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 12664904 - Field 2852966117 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error Message</source>
+          <target>Fehlermeldung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Error Message Setup - Field Error Message - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 12664904 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target>Primärschlüssel</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Error Message Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1449408635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed Job Queues Error Log</source>
+          <target>Fehlerprotokoll Fehlgeschlagene Aufgabenwarteschlangen</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Failed Job Queue Error Log - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1449408635 - Field 2491730758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date and Time</source>
+          <target>Datum und Uhrzeit</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Failed Job Queue Error Log - Field Date and Time - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1449408635 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <target>Lfd. Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Failed Job Queue Error Log - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1449408635 - Field 2852966117 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error Message</source>
+          <target>Fehlermeldung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Failed Job Queue Error Log - Field Error Message - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1449408635 - Field 2708250016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User ID</source>
+          <target>Benutzer ID</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Failed Job Queue Error Log - Field User ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3254146219 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Job Queue Setup</source>
+          <target>Aufgabenwarteschlange Einrichtung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Job Queue Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3254146219 - Field 3216033803 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cc1</source>
+          <target>Cc1</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Job Queue Setup - Field Cc1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3254146219 - Field 834156358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cc2</source>
+          <target>Cc2</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Job Queue Setup - Field Cc2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3254146219 - Field 196459741 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cc3</source>
+          <target>Cc3</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Job Queue Setup - Field Cc3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3254146219 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target>Primärschlüssel</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Job Queue Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3254146219 - Field 3483619077 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>To</source>
+          <target>An</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Job Queue Setup - Field To - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3254146219 - Field 4165234317 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Url</source>
+          <target>Url</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Job Queue Setup - Field Url - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 12664904 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error Message Setup</source>
+          <target>Fehlermeldung Einrichtung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Error Message Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 12664904 - Control 2852966117 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specify the error message that will be returned by the job queue.</source>
+          <target>Geben Sie die Fehlermeldung an, die von der Aufgabenwarteschlange zurückgegeben werden soll.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Error Message Setup - Control Error Message - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1449408635 - Control 2491730758 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the date and time when the job queue failed.</source>
+          <target>Gibt das Datum und die Uhrzeit an, wann der Auftrag in der Aufgabenwarteschlange fehlgeschlagen ist.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Failed Job Queue Error Log - Control Date and Time - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1449408635 - Control 2852966117 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the error message from the failed job queues.</source>
+          <target>Gibt die Fehlermeldung der fehlgeschlagenen Aufgabenwarteschlangen an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Failed Job Queue Error Log - Control Error Message - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1449408635 - Control 2852966117 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error Message</source>
+          <target>Fehlermeldung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Failed Job Queue Error Log - Control Error Message - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1449408635 - Control 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the user on which name was the job queue that failed.</source>
+          <target>Gibt den Benutzer an, auf dessen Namen die fehlgeschlagene Aufgabenwarteschlange lief.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Failed Job Queue Error Log - Control User ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1449408635 - Action 748932884 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show error message</source>
+          <target>Fehlermeldung anzeigen</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Failed Job Queue Error Log - Action ShowErrorMessage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3254146219 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Job Queue Setup</source>
+          <target>Aufgabenwarteschlange Einrichtung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3254146219 - Control 3216033803 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specify the first carbon copy recipient for the email.</source>
+          <target>Geben Sie den ersten Empfänger der Kopie für die E-Mail an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Control Cc1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3254146219 - Control 834156358 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specify the second carbon copy recipient for the email.</source>
+          <target>Geben Sie den zweiten Empfänger der Kopie für die E-Mail an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Control Cc2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3254146219 - Control 196459741 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specify the third carbon copy recipient for the email.</source>
+          <target>Geben Sie den dritten Empfänger der Kopie für die E-Mail an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Control Cc3 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3254146219 - Control 3483619077 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specify the recipient for the email.</source>
+          <target>Geben Sie den Empfänger der E-Mail an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Control To - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3254146219 - Control 4165234317 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specify the url the web requests are sent to.</source>
+          <target>Geben Sie die URL an, an die die Webanfragen gesendet werden.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Control Url - Property ToolTip</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

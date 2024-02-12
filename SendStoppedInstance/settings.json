@@ -1,0 +1,12 @@
+{
+    "paths": {
+        "logFileOutputDir": "C:\\Temp\\Logs\\Logger_StoppedServerInstance",
+        "navAdminTool": "C:\\Program Files\\Microsoft Dynamics 365 Business Central\\230\\Service\\NavAdminTool.ps1"
+    },
+    "urls": {
+        "sendEmailAPI": "https://localhost:444/api/controller/SendStoppedServerInstance"
+    },
+    "connectionStrings": {
+        "bcDatabase": "Data Source=LAPTOP-E9V4J7BH;Initial Catalog=Demo Database BC (23-0);Trusted_Connection=True"
+    }
+}

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\EmailFailedJobQueues</_PublishTargetUrl>
+    <History>True|2024-01-18T19:20:09.4523714Z;True|2024-01-18T20:19:33.3940740+02:00;True|2024-01-18T19:48:08.5969273+02:00;False|2024-01-18T19:45:58.4654732+02:00;True|2023-05-26T15:59:47.5267275+03:00;True|2023-02-28T16:08:19.6963314+02:00;True|2023-02-28T16:04:08.7207468+02:00;True|2023-02-20T08:22:33.0205404+02:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
