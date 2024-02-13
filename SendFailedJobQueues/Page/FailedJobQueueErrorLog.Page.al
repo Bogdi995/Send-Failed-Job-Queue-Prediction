@@ -52,16 +52,4 @@ page 50101 "Failed Job Queue Error Log"
             }
         }
     }
-
-    var
-        FailedJobQueueManagement: Codeunit "Failed Job Queue Management";
-
-    trigger OnOpenPage()
-    var
-        FailedJobQueueManagement: Codeunit "Failed Job Queue Management";
-        JobQueueEntry: Record "Job Queue Entry";
-    begin
-        // if JobQueueEntry.FindFirst() then
-        //     FailedJobQueueManagement.SendPostRequest(JobQueueEntry);
-    end;
 }
