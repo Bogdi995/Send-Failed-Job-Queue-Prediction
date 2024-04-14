@@ -28,7 +28,7 @@ codeunit 50100 "Failed Job Queue Management"
         IsHandled := true;
     end;
 
-    procedure SendPostRequest(var JobQueueEntry: Record "Job Queue Entry")
+    local procedure SendPostRequest(var JobQueueEntry: Record "Job Queue Entry")
     var
         Client: HttpClient;
         Headers: HttpHeaders;
@@ -86,9 +86,10 @@ codeunit 50100 "Failed Job Queue Management"
         JObject.Add('ObjectType', Format(JobQueueEntry."Object Type to Run"));
         JObject.Add('ObjectId', Format(JobQueueEntry."Object ID to Run"));
         JObject.Add('ObjectDescription', JobQueueEntry."Object Caption to Run");
-        JObject.Add('StartDateTime', GetFilteredJobQueueLogEntry(JobQueueEntry.ID, JobQueueEntry."Maximum No. of Attempts to Run")."Start Date/Time");
+        JObject.Add('StartDateTime', GetProcessedStartDateTime(JobQueueEntry));
         JObject.Add('Duration', Format(GetFilteredJobQueueLogEntry(JobQueueEntry.ID, JobQueueEntry."Maximum No. of Attempts to Run").Duration()));
         JObject.Add('ErrorMessage', JobQueueEntry."Error Message");
+        JObject.Add('ConfidenceLimit', JobQueueSetup."Confidence Limit");
 
         exit(Format(JObject));
     end;
@@ -122,6 +123,29 @@ codeunit 50100 "Failed Job Queue Management"
             end;
 
         exit(JobQueueLogEntry);
+    end;
+
+    local procedure GetProcessedStartDateTime(var JobQueueEntry: Record "Job Queue Entry"): Text
+    var
+        JObject: JsonObject;
+        DateToken: JsonToken;
+        TimeToken: JsonToken;
+        ProcessedDateTime: Text;
+        StartDateTime: DateTime;
+        StartDate: Date;
+        StartTime: Time;
+    begin
+        StartDateTime := GetFilteredJobQueueLogEntry(JobQueueEntry.ID, JobQueueEntry."Maximum No. of Attempts to Run")."Start Date/Time";
+        StartDate := DT2Date(StartDateTime);
+        StartTime := DT2Time(StartDateTime);
+
+        JObject.Add('Date', Today);
+        JObject.Add('Time', Time);
+        JObject.Get('Date', DateToken);
+        JObject.Get('Time', TimeToken);
+
+        ProcessedDateTime := DelChr(Format(DateToken), '=', '"') + 'T' + DelChr(Format(TimeToken), '=', '"');
+        exit(ProcessedDateTime);
     end;
 
     local procedure InsertErrorInLogTable(ErrorMessage: Text)

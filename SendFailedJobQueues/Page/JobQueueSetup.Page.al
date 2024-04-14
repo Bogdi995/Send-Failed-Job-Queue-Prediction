@@ -16,23 +16,27 @@ page 50100 "Job Queue Setup"
             {
                 field(To; Rec."To")
                 {
-                    ToolTip = 'Specify the recipient for the email.';
+                    ToolTip = 'Specifies the recipient for the email.';
                 }
                 field(Cc1; Rec.Cc1)
                 {
-                    ToolTip = 'Specify the first carbon copy recipient for the email.';
+                    ToolTip = 'Specifies the first carbon copy recipient for the email.';
                 }
                 field(Cc2; Rec.Cc2)
                 {
-                    ToolTip = 'Specify the second carbon copy recipient for the email.';
+                    ToolTip = 'Specifies the second carbon copy recipient for the email.';
                 }
                 field(Cc3; Rec.Cc3)
                 {
-                    ToolTip = 'Specify the third carbon copy recipient for the email.';
+                    ToolTip = 'Specifies the third carbon copy recipient for the email.';
                 }
                 field(Url; Rec.Url)
                 {
-                    ToolTip = 'Specify the url the web requests are sent to.';
+                    ToolTip = 'Specifies the url the web requests are sent to.';
+                }
+                field(ConfidenceLimit; Rec."Confidence Limit")
+                {
+                    ToolTip = 'Specifies the minimum confidence limit that the AI must meet to send a possible error resolution.';
                 }
             }
         }

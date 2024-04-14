@@ -1,5 +1,6 @@
 page 50101 "Failed Job Queue Error Log"
 {
+    Caption = 'Failed Job Queue Error Log';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
@@ -52,4 +53,7 @@ page 50101 "Failed Job Queue Error Log"
             }
         }
     }
+
+    var
+        FailedJobQueueManagement: Codeunit "Failed Job Queue Management";
 }

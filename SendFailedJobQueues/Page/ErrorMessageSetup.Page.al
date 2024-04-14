@@ -16,7 +16,7 @@ page 50102 "Error Message Setup"
             {
                 field("Error Message"; Rec."Error Message")
                 {
-                    ToolTip = 'Specify the error message that will be returned by the job queue.';
+                    ToolTip = 'Specifies the error message that will be returned by the job queue.';
                 }
             }
         }

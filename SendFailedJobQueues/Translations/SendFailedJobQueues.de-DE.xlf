@@ -75,6 +75,12 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Job Queue Setup - Field Cc3 - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3254146219 - Field 1796399747 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confidence Limit</source>
+          <target>Konfidenzgrenze</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Job Queue Setup - Field ConfidenceLimit - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3254146219 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
           <target>Primärschlüssel</target>
@@ -100,10 +106,16 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Error Message Setup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 12664904 - Control 2852966117 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specify the error message that will be returned by the job queue.</source>
-          <target>Geben Sie die Fehlermeldung an, die von der Aufgabenwarteschlange zurückgegeben werden soll.</target>
+          <source>Specifies the error message that will be returned by the job queue.</source>
+          <target>Gibt die Fehlermeldung an, die von der Aufgabenwarteschlange zurückgegeben werden soll.</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Error Message Setup - Control Error Message - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1449408635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed Job Queue Error Log</source>
+          <target>Fehlerprotokoll Fehlgeschlagene Aufgabenwarteschlangen</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Failed Job Queue Error Log - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1449408635 - Control 2491730758 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the date and time when the job queue failed.</source>
@@ -142,32 +154,38 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3254146219 - Control 3216033803 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specify the first carbon copy recipient for the email.</source>
-          <target>Geben Sie den ersten Empfänger der Kopie für die E-Mail an.</target>
+          <source>Specifies the first carbon copy recipient for the email.</source>
+          <target>Gibt den ersten Empfänger der Kopie für die E-Mail an.</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Control Cc1 - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3254146219 - Control 834156358 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specify the second carbon copy recipient for the email.</source>
-          <target>Geben Sie den zweiten Empfänger der Kopie für die E-Mail an.</target>
+          <source>Specifies the second carbon copy recipient for the email.</source>
+          <target>Gibt den zweiten Empfänger der Kopie für die E-Mail an.</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Control Cc2 - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3254146219 - Control 196459741 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specify the third carbon copy recipient for the email.</source>
-          <target>Geben Sie den dritten Empfänger der Kopie für die E-Mail an.</target>
+          <source>Specifies the third carbon copy recipient for the email.</source>
+          <target>Gibt den dritten Empfänger der Kopie für die E-Mail an.</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Control Cc3 - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 3254146219 - Control 1796399747 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the minimum confidence limit that the AI must meet to send a possible error resolution.</source>
+          <target>Gibt die Mindestkonfidenzgrenze an, die die KI erfüllen muss, um eine mögliche Fehlerbehebung zu senden.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Control ConfidenceLimit - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3254146219 - Control 3483619077 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specify the recipient for the email.</source>
-          <target>Geben Sie den Empfänger der E-Mail an.</target>
+          <source>Specifies the recipient for the email.</source>
+          <target>Gibt den Empfänger der E-Mail an.</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Control To - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3254146219 - Control 4165234317 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specify the url the web requests are sent to.</source>
-          <target>Geben Sie die URL an, an die die Webanfragen gesendet werden.</target>
+          <source>Specifies the url the web requests are sent to.</source>
+          <target>Gibt die URL an, an die die Webanfragen gesendet werden.</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Job Queue Setup - Control Url - Property ToolTip</note>
         </trans-unit>

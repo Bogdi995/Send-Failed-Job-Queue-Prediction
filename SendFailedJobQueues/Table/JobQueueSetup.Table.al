@@ -42,6 +42,11 @@ table 50100 "Job Queue Setup"
             ExtendedDatatype = URL;
             DataClassification = CustomerContent;
         }
+        field(60; "Confidence Limit"; Decimal)
+        {
+            Caption = 'Confidence Limit';
+            DataClassification = CustomerContent;
+        }
     }
 
     keys
@@ -54,7 +59,7 @@ table 50100 "Job Queue Setup"
 
     fieldgroups
     {
-        fieldgroup(DropDown; To, Cc1, Cc2, Cc3, Url) { }
-        fieldgroup(Brick; To, Cc1, Cc2, Cc3, Url) { }
+        fieldgroup(DropDown; To, Cc1, Cc2, Cc3, Url, "Confidence Limit") { }
+        fieldgroup(Brick; To, Cc1, Cc2, Cc3, Url, "Confidence Limit") { }
     }
 }
