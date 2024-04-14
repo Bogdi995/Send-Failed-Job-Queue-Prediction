@@ -1,6 +1,6 @@
 ﻿namespace Domain.Entities
 {
-    public class MessageJobQueue(string to, List<string> cc, string company, string objectType, string objectId, string objectDescription, DateTime startDateTime, string duration, string errorMessage)
+    public class MessageJobQueue(string to, List<string> cc, string company, string objectType, string objectId, string objectDescription, DateTime startDateTime, string duration, string errorMessage, double confidenceLimit)
     {
         public string To { get; set; } = to;
         public List<string> Cc { get; set; } = cc;
@@ -11,5 +11,6 @@
         public DateTime StartDateTime { get; set; } = startDateTime;
         public string Duration { get; set; } = duration;
         public string ErrorMessage { get; set; } = errorMessage;
+        public double ConfidenceLimit { get; set; } = confidenceLimit;
     }
 }

@@ -2,6 +2,7 @@
 using MailKit.Net.Smtp;
 using Microsoft.Extensions.Configuration;
 using MimeKit;
+using Newtonsoft.Json.Linq;
 using Service.Interfaces;
 
 namespace Service.Services
@@ -11,14 +12,14 @@ namespace Service.Services
 		private readonly EmailConfiguration _emailConfiguration = emailConfiguration;
 		private readonly IConfiguration _configuration = configuration;
 
-        public async Task SendEmail<T>(T message) where T : class 
+        public async Task SendEmail<T>(T message, string responseContent) where T : class 
 		{
-			var emailMessage = CreateEmailMessage(message);
+			var emailMessage = CreateEmailMessage(message, responseContent);
 
 			await Send(emailMessage);
 		}
 
-		private MimeMessage CreateEmailMessage<T>(T message) where T : class
+		private MimeMessage CreateEmailMessage<T>(T message, string responseContent) where T : class
 		{
 			MimeMessage emailMessage = new();
 
@@ -26,7 +27,8 @@ namespace Service.Services
 			{
 				case nameof(MessageJobQueue):
 					MessageJobQueue messageJobQueue = (MessageJobQueue)Convert.ChangeType(message, typeof(MessageJobQueue));
-					emailMessage = CreateEmailJobQueue(messageJobQueue);
+					string possibleSolution = GetPossibleSolution(responseContent, messageJobQueue.ConfidenceLimit);
+					emailMessage = CreateEmailJobQueue(messageJobQueue, possibleSolution);
 					break;
 
 				case nameof(MessageServerInstance):
@@ -38,7 +40,7 @@ namespace Service.Services
 			return emailMessage;
 		}
 
-		private MimeMessage CreateEmailJobQueue(MessageJobQueue messageJobQueue)
+		private MimeMessage CreateEmailJobQueue(MessageJobQueue messageJobQueue, string possibleSolution)
 		{
 			var emailMessage = new MimeMessage();
 
@@ -48,7 +50,7 @@ namespace Service.Services
 			emailMessage.Subject = _configuration.GetSection("JobQueueMailSubject").Value;
 			var bodyBuilder = new BodyBuilder
 			{
-				HtmlBody = GetTextJobQueueFailed(messageJobQueue)
+				HtmlBody = GetTextJobQueueFailed(messageJobQueue, possibleSolution)
 			};
 			emailMessage.Body = bodyBuilder.ToMessageBody();
 
@@ -76,35 +78,36 @@ namespace Service.Services
 		{
 			using var client = new SmtpClient();
 			
-			await client.ConnectAsync(_emailConfiguration.SmtpServer);
+			await client.ConnectAsync(_emailConfiguration.SmtpServer, _emailConfiguration.Port, true);
 			await client.AuthenticateAsync(_emailConfiguration.UserName, _emailConfiguration.Password);
 			await client.SendAsync(mailMessage);
 			await client.DisconnectAsync(true);
 			client.Dispose();
 		}
 
-		private string GetTextJobQueueFailed(MessageJobQueue messageJobQueue)
+		private string GetTextJobQueueFailed(MessageJobQueue messageJobQueue, string possibleSolution)
 		{
 			string mailText = GetMailText(_configuration.GetSection("JobQueueTemplate").Value);
 
-			return mailText.Replace("[Mandant]", messageJobQueue.Company)
-				.Replace("[Art]", messageJobQueue.ObjectType)
+			return mailText.Replace("[Company]", messageJobQueue.Company)
+				.Replace("[Type]", messageJobQueue.ObjectType)
 				.Replace("[ID]", messageJobQueue.ObjectId)
-				.Replace("[Beschriftung]", messageJobQueue.ObjectDescription)
-				.Replace("[Startdatum/-uhrzeit]", messageJobQueue.StartDateTime.ToString())
-				.Replace("[Dauer]", messageJobQueue.Duration)
-				.Replace("[Fehlermeldung]", messageJobQueue.ErrorMessage);
+				.Replace("[Description]", messageJobQueue.ObjectDescription)
+				.Replace("[StartDateTime]", messageJobQueue.StartDateTime.ToString())
+				.Replace("[Duration]", messageJobQueue.Duration)
+				.Replace("[ErrorMessage]", messageJobQueue.ErrorMessage)
+				.Replace("[PossibleSolution]", possibleSolution);
 		}
 
 		private string GetTextServerInstanceStopped(MessageServerInstance messageServerInstance)
 		{
 			string mailText = GetMailText(_configuration.GetSection("ServiceInstanceTemplate").Value);
 
-			return mailText.Replace("[Server Instance]", messageServerInstance.ServerInstance)
+			return mailText.Replace("[ServerInstance]", messageServerInstance.ServerInstance)
 				.Replace("[State]", messageServerInstance.State)
-				.Replace("[Service Account]", messageServerInstance.ServiceAccount)
-				.Replace("[Database Server]", messageServerInstance.DatabaseServer)
-				.Replace("[Database Name]", messageServerInstance.DatabaseName);
+				.Replace("[ServiceAccount]", messageServerInstance.ServiceAccount)
+				.Replace("[DatabaseServer]", messageServerInstance.DatabaseServer)
+				.Replace("[DatabaseName]", messageServerInstance.DatabaseName);
 		}
 
 		private static string GetMailText(string path)
@@ -116,5 +119,23 @@ namespace Service.Services
 
 			return mailText;
 		}
-	}
+
+        private static string GetPossibleSolution(string responseContent, double confidenceLimit)
+        {
+            if (responseContent == "")
+				return "Keine mögliche Lösung gefunden.";
+
+            JObject jsonResponse = JObject.Parse(responseContent);
+            double? confidence = (double?)jsonResponse["confidence"];
+
+            if (confidence == null || confidence < confidenceLimit)
+            {
+                return "Keine mögliche Lösung gefunden.";
+            }
+
+            string? prediction = (string?)jsonResponse["prediction"];
+
+            return prediction ?? "Keine mögliche Lösung gefunden.";
+        }
+    }
 }

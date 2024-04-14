@@ -2,6 +2,6 @@
 {
 	public interface IEmailSender
 	{
-		Task SendEmail<T>(T message) where T : class;
+        Task SendEmail<T>(T message, string responseContent) where T : class;
 	}
 }
