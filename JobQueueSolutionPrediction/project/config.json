@@ -1,0 +1,47 @@
+{
+    "paths": {
+        "intents": "data\\intents\\intents.json",
+        "stopwords": "data\\stopwords\\aug_stopwords.txt",
+        "entities": "data\\entities\\entities.txt",
+        "contractions": "data\\contractions\\contractions.txt",
+        "spelling": "data\\spelling\\custom_spelling.txt",
+        "preprocessing_functions": "data\\preprocessed\\preprocessing_functions.pkl",
+        "preprocessed_training_utterances": "data\\preprocessed\\preprocessed_training_utterances.pkl",
+        "vectorized_preprocessed_training_utterances": "data\\preprocessed\\vectorized_preprocessed_training_utterances.pkl",
+        "nlp": "data\\nlp\\trained_nlp",
+        "model": "models\\job_queue_model.h5",
+        "vectorizer": "data\\vectorizers\\vectorizer.pkl",
+        "label_encoder": "data\\encoders\\label_encoder.pkl"
+    },
+    "data_augmentation": {
+        "utterances_length": 10
+    },
+    "ner": {
+        "iterations": 20
+    },
+    "spacy": {
+        "trained_pipeline": "de_core_news_md"
+    },
+    "vocabulary": {
+        "vocab_size": 5000,
+        "max_sequence_length": 250
+    },
+    "model": {
+        "embedding_dim": 128,
+        "filters": 128,
+        "kernel_size": 5,
+        "padding": "valid",
+        "activation": "relu",
+        "final_layer_activation": "softmax",
+        "strides": 2,
+        "dropout_rate": 0.5,
+        "units": 256,
+        "optimizer": "adam",
+        "metric": "accuracy"
+    },
+    "training": {
+        "batch_size": 64,
+        "epochs": 30,
+        "num_folds": 10
+    }
+}
