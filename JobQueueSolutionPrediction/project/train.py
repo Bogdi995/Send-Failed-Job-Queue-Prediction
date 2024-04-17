@@ -20,20 +20,6 @@ from src.text_preprocessing import TextPreprocessing
 from src.named_entity_recognition import NamedEntityRecognition
 
 
-def load_configuration(script_dir: str) -> dict[str, any]:
-    """
-    Load configuration from the config.json file.
-
-    Args:
-        script_dir: str: The script directory path.
-
-    Returns:
-        dict[str, any]: Configuration dictionary.
-    """
-    config_path: str = os.path.join(script_dir, 'config.json')
-
-    return DataLoading.load_config(config_path)
-
 def load_intents(config: dict[str, any], script_dir: str) -> dict[str, list[str]]:
     """
     Load the intents from the path specified in the configuration.
@@ -224,7 +210,9 @@ def train():
         None
     """
     script_dir: str = os.path.dirname(os.path.realpath(__file__))
-    config: dict[str, any] = load_configuration(script_dir)
+    script_dir: str = os.path.dirname(os.path.realpath(__file__))
+    config_path: str = os.path.join(script_dir, 'config.json')
+    config: dict[str, any] = DataLoading.load_config(config_path)
     intents: dict[str, list[str]] = load_intents(config, script_dir)
 
     aug_training_utterances, aug_training_labels, labels = process_training_data(intents, config, script_dir)
